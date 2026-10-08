@@ -1,4 +1,5 @@
 import sqlite3
+import os
 import json
 import pandas as pd
 from kafka import KafkaConsumer, KafkaProducer
@@ -7,7 +8,7 @@ from src.risk_engine import UPIRiskEngine, Decision
 from src.preprocessing import (convert_into_datetime_obj, extract_features, drop_columns)
 
 TOPIC = "transactions"
-BOOTSTRAP_SERVERS = ["localhost:9092"]
+KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
 
 ENCODER_PATH = "models/ordinal_encoder.joblib"
 TARGET_ENCODER_PATH = "models/target_encoder.joblib"
@@ -85,13 +86,13 @@ print("Risk engine initialized.")
 
 # Kafka Consumer
 consumer = KafkaConsumer(TOPIC,
-                         bootstrap_servers= BOOTSTRAP_SERVERS,
+                         bootstrap_servers= KAFKA_BOOTSTRAP_SERVERS,
                          auto_offset_reset="latest",
                          enable_auto_commit = True,
                          value_deserializer=lambda value: json.loads(value.decode("utf-8")))
 
 # Kafka Producer
-producer = KafkaProducer(bootstrap_servers=BOOTSTRAP_SERVERS,
+producer = KafkaProducer(bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
                          value_serializer=lambda v: json.dumps(v).encode("utf-8"))
 
 print("Risk engine is active.")

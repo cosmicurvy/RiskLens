@@ -1,0 +1,16 @@
+.github
+.gitignore
+
+fraud/
+__pycache__/
+.pytest_cache/
+
+*.db
+*.sqlite
+*.sqlite3
+
+monitoring/reports/
+data/
+.ipynb_checkpoints/
+
+.DS_Store

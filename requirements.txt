@@ -1,0 +1,14 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+kafka-python
+shap
+streamlit
+fastapi[standard]
+plotly
+sqlalchemy
+pytest
+evidently

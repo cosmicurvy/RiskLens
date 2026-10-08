@@ -1,13 +1,14 @@
 import pandas as pd
 import time
 import json
+import os
 from kafka import KafkaProducer
 
 DATA_PATH = "data/streaming_test.csv"
 TOPIC = "transactions"
-KAFKA_SERVER = "localhost:9092"
+KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
 
-producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER,
+producer = KafkaProducer(bootstrap_servers=KAFKA_BOOTSTRAP_SERVERS,
                          value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 
 df = pd.read_csv("data/test_upi_transactions.csv")
