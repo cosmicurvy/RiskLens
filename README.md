@@ -58,8 +58,8 @@ The platform also includes a Streamlit dashboard for monitoring transaction acti
 Clone the repository:
 
 ```bash
-git clone <(https://github.com/cosmicurvy/RiskLens.git)>
-cd <(https://github.com/cosmicurvy/RiskLens.git)>
+git clone https://github.com/cosmicurvy/RiskLens.git
+cd https://github.com/cosmicurvy/RiskLens.git
 ```
 
 Create and activate a virtual environment:
@@ -112,6 +112,6 @@ The Streamlit dashboard is typically available at:
 
 ## Limitations
 
-* The transaction data is synthetic and does not establish real-world fraud detection performance.
+* The transaction data is synthetic and does not establish real-world upi fraud detection data.
 * The risk engine uses configurable thresholds that require calibration and validation before real-world deployment.
 * Production use would require additional security, access control, reliability, and operational safeguards.
