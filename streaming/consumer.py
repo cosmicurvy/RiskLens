@@ -8,7 +8,7 @@ from src.risk_engine import UPIRiskEngine, Decision
 from src.preprocessing import (convert_into_datetime_obj, extract_features, drop_columns)
 
 TOPIC = "transactions"
-KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092")
+KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"
 
 ENCODER_PATH = "models/ordinal_encoder.joblib"
 TARGET_ENCODER_PATH = "models/target_encoder.joblib"
