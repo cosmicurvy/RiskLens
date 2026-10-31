@@ -2,6 +2,9 @@
 
 A real-time upi fraud detection system that combines machine learning, Kafka streaming, and risk-based decision-making to analyze financial transactions and flag potentially fraudulent activity.
 
+## Here is the demo of RiskLens Dashboard
+https://github.com/user-attachments/assets/f5b3342a-2739-4f28-96bd-9227caffb07b
+
 ## Overview
 
 This project simulates a real-time transaction monitoring pipeline. Incoming transactions are ingested through FastAPI, streamed through Apache Kafka, and analyzed using three machine learning models. A risk engine combines model predictions and contextual signals to determine whether a transaction should be allowed, reviewed, or blocked.
