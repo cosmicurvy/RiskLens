@@ -4,7 +4,7 @@ import json
 import os
 from kafka import KafkaProducer
 
-DATA_PATH = "data/data/test_upi_transactions.csv"
+DATA_PATH = "data/test_upi_transactions.csv"
 TOPIC = "transactions"
 KAFKA_BOOTSTRAP_SERVERS = "localhost:9092"
 
