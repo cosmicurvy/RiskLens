@@ -3,7 +3,7 @@
 A real-time upi fraud detection system that combines machine learning, Kafka streaming, and risk-based decision-making to analyze financial transactions and flag potentially fraudulent activity.
 
 ## Here is the demo of RiskLens Dashboard
-https://github.com/user-attachments/assets/f5b3342a-2739-4f28-96bd-9227caffb07b
+https://github.com/user-attachments/assets/0deffa6c-4859-4e9e-bd49-dd2a67a1b936
 
 ## Overview
 
